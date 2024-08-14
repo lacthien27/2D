@@ -1,8 +1,8 @@
     public interface BrickObserver
 {
-    public abstract void BrickStart();
-    public abstract void BrickExisting();
-    public abstract void BrickImpact();
+    public abstract void ObserverStart();
+    public abstract void ObserverExisting();
+    public abstract void ObserverImpacted();
 
 
 

@@ -24,6 +24,30 @@ public class BrickCtrl : ThienMonoBehaviour
 
     [SerializeField] public Transform modelComplete_1;
 
+        protected override void Start()
+    {
+        base.Start();
+        this.ObserverStart();
+    }
+
+    protected virtual  void FixedUpdate() 
+    {
+        this.BrickExisting();   
+    }
+
+
+    protected virtual void BrickExisting()
+    {
+        
+        //when impacted will invoke method BrickImpact();
+    }
+
+
+      protected virtual void BrickImpacted()
+    {
+
+    }
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -39,7 +63,6 @@ public class BrickCtrl : ThienMonoBehaviour
         Debug.LogWarning(transform.name +" : LoadModelComplete_1 ",gameObject);
     }
 
-
     protected virtual void LoadBrickRotate()
     {
         if(this.brickRotate !=null) return;
@@ -53,6 +76,42 @@ public class BrickCtrl : ThienMonoBehaviour
         this.brickMovement =transform.GetComponentInChildren<BrickMovement>();
         Debug.LogWarning(transform.name +" : LoadBrickMovement ",gameObject);
     }
+
+
+
+     public virtual void ObjServerAdd(BrickObserver observer)
+    {
+        this.observers.Add(observer);
+    }
+    
+    protected virtual void  ObserverStart()
+    {
+        foreach (BrickObserver observer in this.observers)
+        {
+            observer. ObserverStart();
+
+        }
+    }
+
+     protected virtual void ObserverExisting()
+    {
+        foreach (BrickObserver observer in this.observers)
+        {
+            observer.ObserverExisting();
+
+        }
+    }
+
+
+     protected virtual void ObserverImpacted()
+    {
+        foreach (BrickObserver observer in this.observers)
+        {
+            observer.ObserverImpacted();
+
+        }
+    }
+
 
    
 }
