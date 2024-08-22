@@ -132,8 +132,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2417491}
+  - component: {fileID: 2417492}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,6 +157,19 @@ Transform:
   m_Father: {fileID: 1675040982}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2417492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2417490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 1935240478}
 --- !u!1 &6633794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,7 +1217,7 @@ GameObject:
   - component: {fileID: 110232862}
   - component: {fileID: 110232864}
   m_Layer: 0
-  m_Name: BrickImpact
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1283,8 +1297,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 110232863}
   cl2d: {fileID: 110232862}
+  isImpacted: 0
 --- !u!1 &133694840
 GameObject:
   m_ObjectHideFlags: 0
@@ -2141,8 +2157,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 226501054}
+  - component: {fileID: 226501055}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2165,6 +2182,19 @@ Transform:
   m_Father: {fileID: 1675040982}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &226501055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226501053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 1782721683}
 --- !u!1 &240047054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2920,6 +2950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 328442033}
+  - component: {fileID: 328442034}
   m_Layer: 0
   m_Name: IngredientCtrl
   m_TagString: Untagged
@@ -2945,6 +2976,19 @@ Transform:
   m_Father: {fileID: 1510994291}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &328442034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328442032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 1251991936}
 --- !u!1 &342499025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2958,7 +3002,7 @@ GameObject:
   - component: {fileID: 342499027}
   - component: {fileID: 342499029}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3038,8 +3082,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 342499028}
   cl2d: {fileID: 342499027}
+  isImpacted: 0
 --- !u!1 &357551828
 GameObject:
   m_ObjectHideFlags: 0
@@ -3465,8 +3511,10 @@ MonoBehaviour:
   isSpawnBrick: 0
   isExistingBrick: 0
   isImpactBricked: 0
+  isPetrified: 0
   brickMovement: {fileID: 240699381}
   brickRotate: {fileID: 79275210}
+  ingredientImpact: {fileID: 0}
   modelComplete_1: {fileID: 1657421853}
 --- !u!1 &379380675
 GameObject:
@@ -3695,8 +3743,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 415185642}
+  - component: {fileID: 415185643}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3719,6 +3768,19 @@ Transform:
   m_Father: {fileID: 1675040982}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &415185643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415185641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 780965873}
 --- !u!1 &421674151
 GameObject:
   m_ObjectHideFlags: 0
@@ -5472,7 +5534,7 @@ GameObject:
   - component: {fileID: 586454472}
   - component: {fileID: 586454474}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5552,8 +5614,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 586454473}
   cl2d: {fileID: 586454472}
+  isImpacted: 0
 --- !u!1 &590116485
 GameObject:
   m_ObjectHideFlags: 0
@@ -5563,8 +5627,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 590116486}
+  - component: {fileID: 590116487}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5587,6 +5652,19 @@ Transform:
   m_Father: {fileID: 1657421853}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &590116487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590116485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 342499029}
 --- !u!1 &592747488
 GameObject:
   m_ObjectHideFlags: 0
@@ -6011,7 +6089,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628831501}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -6036,8 +6114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 628831504}
   cl2d: {fileID: 628831503}
+  isImpacted: 0
 --- !u!1 &635402883
 GameObject:
   m_ObjectHideFlags: 0
@@ -6047,8 +6127,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 635402884}
+  - component: {fileID: 635402885}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6071,6 +6152,19 @@ Transform:
   m_Father: {fileID: 1120725711}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &635402885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635402883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 1849465853}
 --- !u!1 &644312263
 GameObject:
   m_ObjectHideFlags: 0
@@ -6456,8 +6550,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 690169246}
+  - component: {fileID: 690169247}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6480,6 +6575,19 @@ Transform:
   m_Father: {fileID: 436800765}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &690169247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690169245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 874180820}
 --- !u!1 &690252479
 GameObject:
   m_ObjectHideFlags: 0
@@ -6784,8 +6892,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 714702125}
+  - component: {fileID: 714702126}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6808,6 +6917,19 @@ Transform:
   m_Father: {fileID: 1675040982}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &714702126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714702124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 938950682}
 --- !u!1 &716288568
 GameObject:
   m_ObjectHideFlags: 0
@@ -6837,7 +6959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cddfaedcd8b56b941ae31635fc780ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brickCtrl: {fileID: 0}
+  brickCtrl: {fileID: 901198343}
   speedMove: 0.005
   target: {fileID: 1879298988}
 --- !u!4 &716288570
@@ -7119,7 +7241,7 @@ GameObject:
   - component: {fileID: 780965871}
   - component: {fileID: 780965873}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7199,8 +7321,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 780965872}
   cl2d: {fileID: 780965871}
+  isImpacted: 0
 --- !u!1 &792156083
 GameObject:
   m_ObjectHideFlags: 0
@@ -7707,7 +7831,7 @@ GameObject:
   - component: {fileID: 874180818}
   - component: {fileID: 874180820}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7787,8 +7911,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 874180819}
   cl2d: {fileID: 874180818}
+  isImpacted: 0
 --- !u!1 &901198341
 GameObject:
   m_ObjectHideFlags: 0
@@ -7839,8 +7965,10 @@ MonoBehaviour:
   isSpawnBrick: 0
   isExistingBrick: 0
   isImpactBricked: 0
+  isPetrified: 0
   brickMovement: {fileID: 716288569}
   brickRotate: {fileID: 1438435658}
+  ingredientImpact: {fileID: 0}
   modelComplete_1: {fileID: 1675040982}
 --- !u!1 &912620887
 GameObject:
@@ -8100,7 +8228,7 @@ GameObject:
   - component: {fileID: 938950680}
   - component: {fileID: 938950682}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8180,8 +8308,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 938950681}
   cl2d: {fileID: 938950680}
+  isImpacted: 0
 --- !u!1 &956102742
 GameObject:
   m_ObjectHideFlags: 0
@@ -8191,8 +8321,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 956102743}
+  - component: {fileID: 956102744}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8215,6 +8346,19 @@ Transform:
   m_Father: {fileID: 988626879}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &956102744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956102742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 2108143791}
 --- !u!1 &956294734
 GameObject:
   m_ObjectHideFlags: 0
@@ -8394,9 +8538,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 965611599}
+  - component: {fileID: 965611602}
   - component: {fileID: 965611600}
   - component: {fileID: 965611601}
-  - component: {fileID: 965611602}
   m_Layer: 0
   m_Name: IngredientImpact
   m_TagString: Untagged
@@ -8427,7 +8571,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965611598}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -8478,8 +8622,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 2009929667}
   rb2d: {fileID: 965611600}
   cl2d: {fileID: 965611601}
+  isImpacted: 0
 --- !u!1 &977046958
 GameObject:
   m_ObjectHideFlags: 0
@@ -8663,7 +8809,7 @@ GameObject:
   - component: {fileID: 986274939}
   - component: {fileID: 986274941}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8743,8 +8889,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 986274940}
   cl2d: {fileID: 986274939}
+  isImpacted: 0
 --- !u!1 &988626878
 GameObject:
   m_ObjectHideFlags: 0
@@ -8789,8 +8937,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 991195878}
+  - component: {fileID: 991195879}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8813,6 +8962,19 @@ Transform:
   m_Father: {fileID: 1120725711}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &991195879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991195877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 986274941}
 --- !u!1 &993118436
 GameObject:
   m_ObjectHideFlags: 0
@@ -9241,7 +9403,7 @@ GameObject:
   - component: {fileID: 1011283501}
   - component: {fileID: 1011283503}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9321,8 +9483,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 1011283502}
   cl2d: {fileID: 1011283501}
+  isImpacted: 0
 --- !u!1 &1013971425
 GameObject:
   m_ObjectHideFlags: 0
@@ -9867,8 +10031,10 @@ MonoBehaviour:
   isSpawnBrick: 0
   isExistingBrick: 0
   isImpactBricked: 0
+  isPetrified: 0
   brickMovement: {fileID: 86068740}
   brickRotate: {fileID: 1379977474}
+  ingredientImpact: {fileID: 0}
   modelComplete_1: {fileID: 988626879}
 --- !u!1 &1062838754
 GameObject:
@@ -9963,7 +10129,7 @@ GameObject:
   - component: {fileID: 1077902789}
   - component: {fileID: 1077902791}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10043,8 +10209,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 1077902790}
   cl2d: {fileID: 1077902789}
+  isImpacted: 0
 --- !u!1 &1084068794
 GameObject:
   m_ObjectHideFlags: 0
@@ -10085,8 +10253,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1085183621}
+  - component: {fileID: 1085183622}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10109,6 +10278,19 @@ Transform:
   m_Father: {fileID: 1657421853}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1085183622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085183620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 1520035880}
 --- !u!1 &1093898981
 GameObject:
   m_ObjectHideFlags: 0
@@ -10461,8 +10643,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1130923043}
+  - component: {fileID: 1130923044}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10485,6 +10668,19 @@ Transform:
   m_Father: {fileID: 436800765}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1130923044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130923042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 2114826708}
 --- !u!1 &1136180840
 GameObject:
   m_ObjectHideFlags: 0
@@ -10659,8 +10855,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1205879592}
+  - component: {fileID: 1205879593}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10683,6 +10880,19 @@ Transform:
   m_Father: {fileID: 1657421853}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1205879593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205879591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 586454474}
 --- !u!1 &1211351226
 GameObject:
   m_ObjectHideFlags: 0
@@ -11355,8 +11565,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 1251991935}
   cl2d: {fileID: 1251991934}
+  isImpacted: 0
 --- !u!1 &1259369188
 GameObject:
   m_ObjectHideFlags: 0
@@ -11366,8 +11578,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1259369189}
+  - component: {fileID: 1259369190}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11390,6 +11603,19 @@ Transform:
   m_Father: {fileID: 988626879}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1259369190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259369188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 1853181348}
 --- !u!1 &1270906344
 GameObject:
   m_ObjectHideFlags: 0
@@ -13175,8 +13401,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1441579156}
+  - component: {fileID: 1441579157}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13199,6 +13426,19 @@ Transform:
   m_Father: {fileID: 988626879}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1441579157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441579155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 1011283503}
 --- !u!1 &1446102661
 GameObject:
   m_ObjectHideFlags: 0
@@ -13249,8 +13489,10 @@ MonoBehaviour:
   isSpawnBrick: 0
   isExistingBrick: 0
   isImpactBricked: 0
+  isPetrified: 0
   brickMovement: {fileID: 178111673}
   brickRotate: {fileID: 1093898983}
+  ingredientImpact: {fileID: 0}
   modelComplete_1: {fileID: 436800765}
 --- !u!1 &1446230791
 GameObject:
@@ -13847,8 +14089,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1507049571}
+  - component: {fileID: 1507049572}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13871,6 +14114,19 @@ Transform:
   m_Father: {fileID: 1120725711}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507049572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507049570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 1939300486}
 --- !u!1 &1508740698
 GameObject:
   m_ObjectHideFlags: 0
@@ -13880,8 +14136,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1508740699}
+  - component: {fileID: 1508740700}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13904,6 +14161,19 @@ Transform:
   m_Father: {fileID: 988626879}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1508740700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508740698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 1933206226}
 --- !u!1 &1510994290
 GameObject:
   m_ObjectHideFlags: 0
@@ -13952,7 +14222,7 @@ GameObject:
   - component: {fileID: 1520035878}
   - component: {fileID: 1520035880}
   m_Layer: 0
-  m_Name: BrickImpact
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14032,8 +14302,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 1520035879}
   cl2d: {fileID: 1520035878}
+  isImpacted: 0
 --- !u!1 &1529763948
 GameObject:
   m_ObjectHideFlags: 0
@@ -14498,8 +14770,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1584497022}
+  - component: {fileID: 1584497023}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14522,6 +14795,19 @@ Transform:
   m_Father: {fileID: 1120725711}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1584497023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584497021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 1925663856}
 --- !u!1 &1590199055
 GameObject:
   m_ObjectHideFlags: 0
@@ -14562,8 +14848,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1596471629}
+  - component: {fileID: 1596471630}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14586,6 +14873,19 @@ Transform:
   m_Father: {fileID: 1675040982}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1596471630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596471628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 1077902791}
 --- !u!1 &1597527113
 GameObject:
   m_ObjectHideFlags: 0
@@ -14716,8 +15016,10 @@ MonoBehaviour:
   isSpawnBrick: 0
   isExistingBrick: 0
   isImpactBricked: 0
+  isPetrified: 0
   brickMovement: {fileID: 2064603019}
   brickRotate: {fileID: 289596383}
+  ingredientImpact: {fileID: 0}
   modelComplete_1: {fileID: 1120725711}
 --- !u!1 &1642487864
 GameObject:
@@ -15452,9 +15754,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1749131521}
+  - component: {fileID: 1749131524}
   - component: {fileID: 1749131523}
   - component: {fileID: 1749131522}
-  - component: {fileID: 1749131524}
   m_Layer: 0
   m_Name: 'IngredientImpact '
   m_TagString: Untagged
@@ -15511,7 +15813,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749131520}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -15536,8 +15838,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 2009929667}
   rb2d: {fileID: 1749131523}
   cl2d: {fileID: 1749131522}
+  isImpacted: 0
 --- !u!1 &1768159244
 GameObject:
   m_ObjectHideFlags: 0
@@ -15715,7 +16019,7 @@ GameObject:
   - component: {fileID: 1782721681}
   - component: {fileID: 1782721683}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15795,8 +16099,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 1782721682}
   cl2d: {fileID: 1782721681}
+  isImpacted: 0
 --- !u!1 &1786617881
 GameObject:
   m_ObjectHideFlags: 0
@@ -16059,7 +16365,7 @@ GameObject:
   - component: {fileID: 1849465851}
   - component: {fileID: 1849465853}
   m_Layer: 0
-  m_Name: BrickImpact
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16139,8 +16445,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 1849465852}
   cl2d: {fileID: 1849465851}
+  isImpacted: 0
 --- !u!1 &1853181344
 GameObject:
   m_ObjectHideFlags: 0
@@ -16154,7 +16462,7 @@ GameObject:
   - component: {fileID: 1853181346}
   - component: {fileID: 1853181348}
   m_Layer: 0
-  m_Name: BrickImpact
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16234,8 +16542,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 1853181347}
   cl2d: {fileID: 1853181346}
+  isImpacted: 0
 --- !u!1 &1868401604
 GameObject:
   m_ObjectHideFlags: 0
@@ -16487,8 +16797,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1890794240}
+  - component: {fileID: 1890794241}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16511,6 +16822,19 @@ Transform:
   m_Father: {fileID: 436800765}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1890794241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890794239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 110232864}
 --- !u!1 &1898821575
 GameObject:
   m_ObjectHideFlags: 0
@@ -16911,7 +17235,7 @@ GameObject:
   - component: {fileID: 1925663854}
   - component: {fileID: 1925663856}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16991,8 +17315,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 1925663855}
   cl2d: {fileID: 1925663854}
+  isImpacted: 0
 --- !u!1 &1933206222
 GameObject:
   m_ObjectHideFlags: 0
@@ -17006,7 +17332,7 @@ GameObject:
   - component: {fileID: 1933206224}
   - component: {fileID: 1933206226}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17086,8 +17412,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 1933206225}
   cl2d: {fileID: 1933206224}
+  isImpacted: 0
 --- !u!1 &1935240474
 GameObject:
   m_ObjectHideFlags: 0
@@ -17101,7 +17429,7 @@ GameObject:
   - component: {fileID: 1935240476}
   - component: {fileID: 1935240478}
   m_Layer: 0
-  m_Name: BrickImpact
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17181,8 +17509,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 1935240477}
   cl2d: {fileID: 1935240476}
+  isImpacted: 0
 --- !u!1 &1938777681
 GameObject:
   m_ObjectHideFlags: 0
@@ -17281,7 +17611,7 @@ GameObject:
   - component: {fileID: 1939300484}
   - component: {fileID: 1939300486}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17361,8 +17691,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 1939300485}
   cl2d: {fileID: 1939300484}
+  isImpacted: 0
 --- !u!1 &1952730094
 GameObject:
   m_ObjectHideFlags: 0
@@ -17694,7 +18026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1bbcacd915960c49af0cc5601db4336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 3
+  gameCtrl: {fileID: 1107370225}
 --- !u!1 &1984056651
 GameObject:
   m_ObjectHideFlags: 0
@@ -17704,8 +18036,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1984056652}
+  - component: {fileID: 1984056653}
   m_Layer: 0
-  m_Name: ModelBrick
+  m_Name: IngredientCtrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17728,6 +18061,19 @@ Transform:
   m_Father: {fileID: 436800765}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1984056653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984056651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911129f6d56403844ac4b60d82d2dc3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientImpact: {fileID: 2041511243}
 --- !u!1 &2007699162
 GameObject:
   m_ObjectHideFlags: 0
@@ -17824,7 +18170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2009929666
 Transform:
   m_ObjectHideFlags: 0
@@ -17833,7 +18179,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009929665}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -4, z: 0}
+  m_LocalPosition: {x: 2, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17858,9 +18204,11 @@ MonoBehaviour:
   isSpawnBrick: 0
   isExistingBrick: 0
   isImpactBricked: 0
+  isPetrified: 0
   brickMovement: {fileID: 389711396}
   brickRotate: {fileID: 1868401606}
-  modelComplete_1: {fileID: 1510994291}
+  ingredientImpact: {fileID: 965611602}
+  modelComplete_1: {fileID: 0}
 --- !u!1 &2022778429
 GameObject:
   m_ObjectHideFlags: 0
@@ -18084,7 +18432,7 @@ GameObject:
   - component: {fileID: 2041511241}
   - component: {fileID: 2041511243}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18164,8 +18512,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 2041511242}
   cl2d: {fileID: 2041511241}
+  isImpacted: 0
 --- !u!1 &2052664570
 GameObject:
   m_ObjectHideFlags: 0
@@ -18806,7 +19156,7 @@ GameObject:
   - component: {fileID: 2108143789}
   - component: {fileID: 2108143791}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18886,8 +19236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 2108143790}
   cl2d: {fileID: 2108143789}
+  isImpacted: 0
 --- !u!1 &2114026127
 GameObject:
   m_ObjectHideFlags: 0
@@ -18981,7 +19333,7 @@ GameObject:
   - component: {fileID: 2114826706}
   - component: {fileID: 2114826708}
   m_Layer: 0
-  m_Name: 'BrickImpact '
+  m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19061,8 +19413,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e6a4bb705e6334ea118b78825fbd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickCtrl: {fileID: 0}
   rb2d: {fileID: 2114826707}
   cl2d: {fileID: 2114826706}
+  isImpacted: 0
 --- !u!1 &2125414100
 GameObject:
   m_ObjectHideFlags: 0

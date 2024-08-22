@@ -37,7 +37,7 @@ public class BrickRotate : BrickAbs
 
     protected virtual void RotateAroundPoint()
  {
-    this.brickCtrl.modelComplete_1.transform.RotateAround(this.targetRotate.transform.position,Vector3.forward,90);
+  //  this.brickCtrl.modelComplete_1.transform.RotateAround(this.targetRotate.transform.position,Vector3.forward,90);
  }
 
 }

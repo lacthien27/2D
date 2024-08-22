@@ -7,6 +7,8 @@ public abstract class BrickAbs : ThienMonoBehaviour
     [Header("Brick Abstract")]
    [SerializeField] protected BrickCtrl brickCtrl;
 
+   
+
 
     protected override void LoadComponents()
     {
@@ -18,7 +20,7 @@ public abstract class BrickAbs : ThienMonoBehaviour
     {
         if(this.brickCtrl !=null) return;
 
-        this.brickCtrl =transform.parent.GetComponent<BrickCtrl>();
+       this.brickCtrl =transform.parent.GetComponent<BrickCtrl>();
         Debug.LogWarning(transform.name +" : LoadBrickCtrl ",gameObject);
     }
 }

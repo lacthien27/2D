@@ -51,11 +51,7 @@ public class PlayerImpact : PlayerAbs
 
         
 
-        if (other.transform.parent.name=="ModelBrick")
-        {
-            this.isReadyBrick = 0;
-            Debug.LogWarning(this.isReadyBrick);
-        }
+        
     }
     protected void OnTriggerStay2D(Collider2D other)
     {

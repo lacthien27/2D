@@ -4,12 +4,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class BrickSpawnByTime : ThienMonoBehaviour
+public class BrickSpawnByTime : GameAbs
 {
-    [SerializeField] protected float time=3f;
     protected override void Start()
     {
-       // InvokeRepeating("ImplementSpawn",2f,2f);
+        InvokeRepeating("ImplementSpawn",2f,7f);
     }
 
 
@@ -17,9 +16,14 @@ public class BrickSpawnByTime : ThienMonoBehaviour
     protected virtual void ImplementSpawn()
     {
     if(GameCtrl.Instance.PlayerCtrl.PlayerImpact.isReadyBrick==0) return;
+
+    
       Transform newPrefab=   BrickSpawner.Instance.Spawn(BrickSpawner.Instance.RandomPrefab(),GameCtrl.Instance.SpawnPointBrick.PosSpawn,GameCtrl.Instance.SpawnPointBrick.transform.rotation);
+        GameCtrl.Instance.PlayerCtrl.PlayerMove.TargetMoved.UpdateLatestBrick(newPrefab);// tells who the player is controlling
         newPrefab.gameObject.SetActive(true);
     }
+
+
 
   
 

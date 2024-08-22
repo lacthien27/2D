@@ -28,6 +28,8 @@ public class GameCtrl : ThienMonoBehaviour
 
     public BrickSpawner BrickSpawner => brickSpawner;
 
+
+
      protected override void Awake()
     {
         base.Awake();
@@ -46,8 +48,7 @@ public class GameCtrl : ThienMonoBehaviour
         this.LoadBrickSpawner();
 
     }
-
-
+   
 
      protected virtual void LoadBrickSpawner()
     {

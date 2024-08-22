@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IngredientImpact : ThienMonoBehaviour
+public class IngredientImpact : BrickAbs
 {
      [SerializeField] protected Rigidbody2D rb2d;
     public Rigidbody2D Rigidbody2D => rb2d;
@@ -12,7 +12,21 @@ public class IngredientImpact : ThienMonoBehaviour
     public Collider2D Collider2D => cl2d;
 
 
+    public  bool  isImpacted= false;
 
+    [SerializeField] protected List<BrickObserver> observers = new List<BrickObserver>();
+
+    protected override void Start()
+    {
+        base.Start();
+        this.ObserverStart();
+    }
+
+    protected virtual  void FixedUpdate()
+    {
+        if(this.isImpacted==true)return;
+        this.ObserverExisting();
+    }
 
 
    protected override void LoadComponents()
@@ -36,18 +50,50 @@ public class IngredientImpact : ThienMonoBehaviour
     }
 
 
+
+
     protected void OnCollisionEnter2D(Collision2D other) 
     {
-        Debug.LogWarning(other.transform.parent);
 
-        if(other.transform.parent.gameObject.name=="ModelUnder")
+      this.isImpacted = true;
+      this.ObserverImpacted();
+    }
+
+
+     public virtual void ObjServerAdd(BrickObserver observer)
+    {
+        this.observers.Add(observer);
+    }
+    
+    protected virtual void  ObserverStart()
+    {
+        foreach (BrickObserver observer in this.observers)
         {
-
-
+            observer. ObserverStart();
 
         }
-
     }
+
+     protected virtual void ObserverExisting()
+    {
+        foreach (BrickObserver observer in this.observers)
+        {
+            observer.ObserverExisting();
+
+        }
+    }
+
+
+     protected virtual void ObserverImpacted()
+    {
+        foreach (BrickObserver observer in this.observers)
+        {
+            observer.ObserverImpacted();
+
+        }
+    }
+
+   
 
    
 

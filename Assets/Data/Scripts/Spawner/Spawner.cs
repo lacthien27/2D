@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class Spawner : ThienMonoBehaviour
 {
-    [SerializeField] protected Transform holder;
+    [SerializeField] public Transform holder;
+
 
     [SerializeField] protected List<Transform> prefabs;
     [SerializeField] protected List<Transform> poolObjs;
@@ -95,8 +96,9 @@ public class Spawner : ThienMonoBehaviour
             }
 
         }
-        Transform newPrefab = Instantiate(prefab);
+        Transform newPrefab = Instantiate(prefab); // place spawn
         newPrefab.name = prefab.name;
+        Debug.Log(newPrefab.name);
         return newPrefab;
 
 
