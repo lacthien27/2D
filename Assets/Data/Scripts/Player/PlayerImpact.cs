@@ -20,7 +20,6 @@ public class PlayerImpact : PlayerAbs
 
     [SerializeField] public String nameBrickImpact;
 
-    [SerializeField] public int isReadyBrick = 1;
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -43,7 +42,7 @@ public class PlayerImpact : PlayerAbs
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.transform.parent.name == "Model")
+        if (other.transform.parent.name == "ModelUnder")
         {
             this.isMove = 1;
             this.posObjImpacted = this.GetPosColliderImpact(other.transform);

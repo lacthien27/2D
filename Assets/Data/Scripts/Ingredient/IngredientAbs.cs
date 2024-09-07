@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class IngredientAbs : ThienMonoBehaviour
 {
+        [Header("IngredientAbs")]
+
     [SerializeField] protected IngredientCtrl ingredientCtrl;
 
     public IngredientCtrl  IngredientCtrl =>ingredientCtrl;
@@ -21,6 +23,6 @@ public class IngredientAbs : ThienMonoBehaviour
         if(this.ingredientCtrl !=null) return;
 
         this.ingredientCtrl =transform.parent.GetComponent<IngredientCtrl>();
-        Debug.LogWarning(transform.name +" : LoadIngredientCtrl ",gameObject);
+        Debug.Log(transform.name +" : LoadIngredientCtrl ",gameObject);
     }
 }

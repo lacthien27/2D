@@ -26,20 +26,23 @@ public class BrickCtrl : ThienMonoBehaviour
 
     public BrickRotate  BrickRotate => brickRotate;
 
-    
-    [SerializeField] protected IngredientImpact ingredientImpact;
 
-    public IngredientImpact  IngredientImpact => ingredientImpact;
-
-
-    [SerializeField] public Transform modelComplete_1;
+    [SerializeField] public Transform modelComplete;
    
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadBrickMovement();
         this.LoadBrickRotate();
+        this.LoadModelComplete();
 
+    }
+
+      protected virtual void LoadModelComplete()
+    {
+        if(this.modelComplete !=null) return;
+        this.modelComplete =transform.Find("ModelComplete");
+        Debug.LogWarning(transform.name +" : LoadModelComplete ",gameObject);
     }
 
 

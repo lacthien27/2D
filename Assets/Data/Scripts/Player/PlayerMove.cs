@@ -39,7 +39,7 @@ public class PlayerMove : PlayerAbs
     {
       
      Vector3 pos = GetPosMouse();
-     this.posMove= new Vector3(pos.x,4.5f,0);
+     this.posMove= new Vector3(pos.x,-4.5f,0);
       transform.parent.position =this.posMove;
       
     }

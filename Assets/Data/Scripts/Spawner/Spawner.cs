@@ -98,7 +98,6 @@ public class Spawner : ThienMonoBehaviour
         }
         Transform newPrefab = Instantiate(prefab); // place spawn
         newPrefab.name = prefab.name;
-        Debug.Log(newPrefab.name);
         return newPrefab;
 
 

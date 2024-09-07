@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class FixedRotation : IngredientAbs
 {
-    
 
-
-    protected void Update() 
+    protected override void Start()
     {
-        this.FixedObject();
+        base.Start();
+      //  this.FixedObject();
+    }
+
+
+    protected void FixedUpdate() 
+    {
+     //   this.FixedObject();
     }
 
     protected virtual void FixedObject()
     {
-
+        Debug.LogWarning("f");
      this.IngredientCtrl.IngredientImpact.transform.localRotation = Quaternion.Euler(0, 0, 90);
 
     }
