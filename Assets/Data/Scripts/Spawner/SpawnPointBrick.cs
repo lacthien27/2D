@@ -22,7 +22,7 @@ public class SpawnPointBrick : GameAbs
     {
       Vector3 pos = GameCtrl.Instance.PlayerCtrl.PlayerImpact.posObjImpacted;     // pos của object ImpactEd
       pos.x = Mathf.Clamp(pos.x, -1.6f, 2f);
-      this.posSpawn =  new Vector3(pos.x,-1f,0);
+      this.posSpawn =  new Vector3(pos.x,2f,0);
      
 
       return this.posSpawn;

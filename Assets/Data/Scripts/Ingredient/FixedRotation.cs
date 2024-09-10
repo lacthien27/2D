@@ -1,26 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class FixedRotation : IngredientAbs
+
+
+ public class FixedRotation : IngredientAbs
+
 {
+   [SerializeField]   public int angle =0; 
 
     protected override void Start()
     {
-        base.Start();
-      //  this.FixedObject();
+        base.Start(); 
+          IngredientImpact.OnImpactCollision+=FixedObject;
+          InputManager.OnButtonClickedLeft+=FixedDirectObject;
     }
-
-
-    protected void FixedUpdate() 
+   
+    protected virtual void FixedDirectObject()
     {
-     //   this.FixedObject();
+      this.angle+=90;
+     this.ingredientCtrl.IngredientImpact.transform.localRotation = Quaternion.Euler(0, 0, this.angle);
+
     }
-
-    protected virtual void FixedObject()
+        protected virtual void  FixedObject()
     {
-        Debug.LogWarning("f");
-     this.IngredientCtrl.IngredientImpact.transform.localRotation = Quaternion.Euler(0, 0, 90);
-
+            InputManager.OnButtonClickedLeft-=FixedDirectObject;
+              IngredientImpact.OnImpactCollision-=FixedObject;
     }
 }

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using UnityEngine;
+using System;
+
 
 public class InputManager : ThienMonoBehaviour
 {
@@ -18,9 +20,12 @@ public class InputManager : ThienMonoBehaviour
     [SerializeField] public bool changeDirection;
 
     [SerializeField] public bool isButtonClickedLeft= false;
-        [SerializeField] public bool isButtonClickedRight= false;
+    [SerializeField] public bool isButtonClickedRight= false;
 
 
+
+    [SerializeField] public static event Action OnButtonClickedLeft;
+     [SerializeField] public static event Action OnButtonClickedRight;
 
 
     protected override void Awake()
@@ -43,26 +48,27 @@ public class InputManager : ThienMonoBehaviour
     {
         this.GetMousePos();
     }
-    protected virtual void GetMouseLeft()
+
+     protected virtual void GetMouseLeft()
     {
         if (Input.GetMouseButtonDown(0) && !isButtonClickedLeft)          
         {
-             isButtonClickedLeft = true;
-            Debug.LogWarning("left");
+            isButtonClickedLeft = true;
+            OnButtonClickedLeft?.Invoke();
+
         }
          if(Input.GetMouseButtonUp(0))
         {
             isButtonClickedLeft =false;
         }
-    
     }
-
     protected virtual void GetMouseRight()
     {
         if (Input.GetMouseButtonDown(1) && !isButtonClickedRight)          
         {
-             isButtonClickedRight = true;
-            Debug.LogWarning("RIght");
+                isButtonClickedRight = true;
+                        OnButtonClickedRight?.Invoke();
+
         }
          if(Input.GetMouseButtonUp(0))
         {
@@ -71,8 +77,7 @@ public class InputManager : ThienMonoBehaviour
     
     }
 
-
-        
+ 
 
 
     protected virtual void GetMousePos()

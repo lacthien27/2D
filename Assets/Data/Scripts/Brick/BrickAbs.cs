@@ -6,6 +6,8 @@ public abstract class BrickAbs : ThienMonoBehaviour
 {
     [Header("Brick Abstract")]
    [SerializeField] protected BrickCtrl brickCtrl;
+      public BrickCtrl BrickCtrl=> brickCtrl;
+
 
    
 

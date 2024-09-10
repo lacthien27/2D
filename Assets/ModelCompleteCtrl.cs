@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
  using System;
+using UnityEngine.Video;
 
 
-public class ModelCompleteCtrl : ThienMonoBehaviour
+public class ModelCompleteCtrl : BrickAbs
 {
 
 [SerializeField]  protected List<IngredientImpact> ingredientImpacts = new List<IngredientImpact>();
 
+
     protected override void Start()
     {
         base.Start();
-          IngredientImpact.OnImpactCollision+=HandleTrigger;
+        IngredientImpact.OnImpactCollision+=HandleTrigger;
 
     }
 

@@ -76,7 +76,6 @@ public class IngredientImpact : IngredientAbs
         if (isNotifying)   return;
 
         isNotifying = true;
-
          OnImpactCollision?.Invoke();
 
    
