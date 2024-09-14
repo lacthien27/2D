@@ -23,6 +23,6 @@ public class IngredientAbs : ThienMonoBehaviour
         if(this.ingredientCtrl !=null) return;
 
         this.ingredientCtrl =transform.parent.GetComponent<IngredientCtrl>();
-        Debug.Log(transform.name +" : LoadIngredientCtrl ",gameObject);
+    //    Debug.Log(transform.name +" : LoadIngredientCtrl ",gameObject);
     }
 }

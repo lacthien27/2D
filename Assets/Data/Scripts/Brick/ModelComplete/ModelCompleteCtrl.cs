@@ -34,9 +34,11 @@ public class ModelCompleteCtrl : BrickAbs
     {
            foreach (IngredientImpact ingredientImpact in ingredientImpacts)
         {
-                ingredientImpact.gameObject.layer =LayerMask.NameToLayer("Default");
-                Debug.LogWarning(ingredientImpact.gameObject.layer);
+                ingredientImpact.gameObject.layer =LayerMask.NameToLayer("IngredientImpact");
+                ingredientImpact.Collider2D.isTrigger=false;
         }
+
+        
     }
 
     protected virtual void OnDestroy()

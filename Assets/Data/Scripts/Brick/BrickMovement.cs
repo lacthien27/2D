@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 public class BrickMovement : BrickAbs
 {
-    [SerializeField] protected  float speedMove = 0.005f;
+    [SerializeField] protected  float speedMove = 0.03f;
     [SerializeField] public Transform target;
 
     [SerializeField] public  bool  stopMoved = false;

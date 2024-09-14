@@ -23,6 +23,8 @@ public class IngredientImpact : IngredientAbs
 
     
     [SerializeField]  protected  bool isNotifying = false;
+    [SerializeField]  protected  bool isNotifyingWall = false;
+
 
     protected override void Start()
     {
@@ -30,12 +32,14 @@ public class IngredientImpact : IngredientAbs
         this.Settings();
         OnImpactStart?.Invoke();
 
+
         
     }
     protected virtual void Settings()
     {
         rb2d.bodyType = RigidbodyType2D.Dynamic;
-        this.cl2d.isTrigger =true;       
+        this.cl2d.isTrigger =true; 
+        transform.gameObject.layer= LayerMask.NameToLayer("Default");
     }
 
     protected virtual  void FixedUpdate()
@@ -68,18 +72,46 @@ public class IngredientImpact : IngredientAbs
     }
     protected void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == gameObject.layer)  return;
+     /**   if (other.gameObject.layer == gameObject.layer)  return; //avoid ingredient from colliding with each other
          
         if(other.transform.parent.name=="ModelUnder"||other.transform.parent.name=="IngredientCtrl") 
         {
 
-        if (isNotifying)   return;
+        if (isNotifying) return;
+        
+            isNotifying = true;
 
-        isNotifying = true;
-         OnImpactCollision?.Invoke();
+            OnImpactCollision?.Invoke();
+   
+        }**/
 
+
+          if (other.gameObject.layer == gameObject.layer)  return; //avoid ingredient from colliding with each other
+         
+        if(other.transform.parent.name=="IngredientCtrl") 
+        {
+
+        if (isNotifying) return;
+        
+            isNotifying = true;
+
+            OnImpactCollision?.Invoke();
    
         }
+
+        if(other.transform.parent.name=="ModelUnder")
+        {
+              if (isNotifyingWall) return;
+        
+            isNotifyingWall = true;
+
+            OnImpactCollision?.Invoke();
+   
+        }
+        }
+
+
+    
         
 
     }
@@ -102,4 +134,4 @@ public class IngredientImpact : IngredientAbs
    
 
 
-}
+
