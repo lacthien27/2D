@@ -11,6 +11,12 @@ public class ModelCompleteCtrl : BrickAbs
 
 [SerializeField]  protected List<IngredientImpact> ingredientImpacts = new List<IngredientImpact>();
 
+    public static event Action OnImpactStart;
+
+        [SerializeField]  protected  bool isNotifying = false;
+
+
+
 
     protected override void Start()
     {
@@ -36,14 +42,29 @@ public class ModelCompleteCtrl : BrickAbs
         {
                 ingredientImpact.gameObject.layer =LayerMask.NameToLayer("IngredientImpact");
                 ingredientImpact.Collider2D.isTrigger=false;
+              
+              
+              //
+              
+                if(ingredientImpact.Collider2D.isTrigger==true) return;
+                 if (isNotifying) return;
+                   isNotifying = true;
+                    Debug.LogWarning("1");
+                    OnImpactStart?.Invoke();
+
+                }
+
         }
 
+
+
         
-    }
+    
 
     protected virtual void OnDestroy()
     {
                 IngredientImpact.OnImpactCollision-=HandleTrigger;
 
     }
+  
 }

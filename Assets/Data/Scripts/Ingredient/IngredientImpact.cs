@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Unity.VisualScripting;
+using UnityEditor.VersionControl;
 
 public class IngredientImpact : IngredientAbs
 
@@ -23,7 +24,6 @@ public class IngredientImpact : IngredientAbs
 
     
     [SerializeField]  protected  bool isNotifying = false;
-    [SerializeField]  protected  bool isNotifyingWall = false;
 
 
     protected override void Start()
@@ -72,49 +72,29 @@ public class IngredientImpact : IngredientAbs
     }
     protected void OnTriggerEnter2D(Collider2D other)
     {
-     /**   if (other.gameObject.layer == gameObject.layer)  return; //avoid ingredient from colliding with each other
+       
+        if (other.gameObject.layer == gameObject.layer)  return; //avoid ingredient from colliding with each other
          
-        if(other.transform.parent.name=="ModelUnder"||other.transform.parent.name=="IngredientCtrl") 
+        if(other.transform.parent.name=="IngredientCtrl"||other.transform.parent.name=="ModelUnder") 
         {
 
         if (isNotifying) return;
-        
+            Debug.LogWarning("h");
             isNotifying = true;
-
             OnImpactCollision?.Invoke();
-   
-        }**/
-
-
-          if (other.gameObject.layer == gameObject.layer)  return; //avoid ingredient from colliding with each other
-         
-        if(other.transform.parent.name=="IngredientCtrl") 
-        {
-
-        if (isNotifying) return;
-        
-            isNotifying = true;
-
-            OnImpactCollision?.Invoke();
-   
         }
 
-        if(other.transform.parent.name=="ModelUnder")
-        {
-              if (isNotifyingWall) return;
-        
-            isNotifyingWall = true;
+    }
+}
 
-            OnImpactCollision?.Invoke();
-   
-        }
-        }
+
+    
 
 
     
         
 
-    }
+    
 
 
 

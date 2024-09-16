@@ -422,7 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 39358274}
   - component: {fileID: 39358275}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ModelUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 41539971}
   - component: {fileID: 41539973}
   - component: {fileID: 41539972}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BrickImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 75414011}
   - component: {fileID: 75414013}
   - component: {fileID: 75414012}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BrickImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,7 +918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 79299605}
   - component: {fileID: 79299606}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ModelUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1305,6 +1305,7 @@ MonoBehaviour:
   rb2d: {fileID: 110232863}
   cl2d: {fileID: 110232862}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &116271288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,7 +1774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193903491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackGroundUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3280,6 +3281,7 @@ MonoBehaviour:
   rb2d: {fileID: 342499028}
   cl2d: {fileID: 342499027}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &357551828
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,7 +3378,7 @@ GameObject:
   - component: {fileID: 359260620}
   - component: {fileID: 359260622}
   - component: {fileID: 359260621}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BrickImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3502,7 +3504,7 @@ GameObject:
   - component: {fileID: 366327499}
   - component: {fileID: 366327501}
   - component: {fileID: 366327500}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BrickImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3720,7 +3722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 379380676}
   - component: {fileID: 379380677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ModelUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4951,7 +4953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 506502635}
   - component: {fileID: 506502636}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ModelUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5234,7 +5236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 548043731}
   - component: {fileID: 548043732}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ModelUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5837,6 +5839,7 @@ MonoBehaviour:
   rb2d: {fileID: 586454473}
   cl2d: {fileID: 586454472}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &590116485
 GameObject:
   m_ObjectHideFlags: 0
@@ -6113,7 +6116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &619394801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6386,6 +6389,7 @@ MonoBehaviour:
   rb2d: {fileID: 628831504}
   cl2d: {fileID: 628831503}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &635402883
 GameObject:
   m_ObjectHideFlags: 0
@@ -7740,6 +7744,7 @@ MonoBehaviour:
   rb2d: {fileID: 780965872}
   cl2d: {fileID: 780965871}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &792156083
 GameObject:
   m_ObjectHideFlags: 0
@@ -8377,6 +8382,7 @@ MonoBehaviour:
   rb2d: {fileID: 874180819}
   cl2d: {fileID: 874180818}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &901198341
 GameObject:
   m_ObjectHideFlags: 0
@@ -8442,7 +8448,7 @@ GameObject:
   - component: {fileID: 912620888}
   - component: {fileID: 912620890}
   - component: {fileID: 912620889}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BrickImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8774,6 +8780,7 @@ MonoBehaviour:
   rb2d: {fileID: 938950681}
   cl2d: {fileID: 938950680}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &956102742
 GameObject:
   m_ObjectHideFlags: 0
@@ -9091,6 +9098,7 @@ MonoBehaviour:
   rb2d: {fileID: 965611600}
   cl2d: {fileID: 965611601}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &977046958
 GameObject:
   m_ObjectHideFlags: 0
@@ -9186,7 +9194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 983718907}
   - component: {fileID: 983718908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ModelUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9359,6 +9367,7 @@ MonoBehaviour:
   rb2d: {fileID: 986274940}
   cl2d: {fileID: 986274939}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &988626878
 GameObject:
   m_ObjectHideFlags: 0
@@ -9473,7 +9482,7 @@ GameObject:
   - component: {fileID: 993118437}
   - component: {fileID: 993118439}
   - component: {fileID: 993118438}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BrickImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9723,7 +9732,7 @@ GameObject:
   - component: {fileID: 1001427088}
   - component: {fileID: 1001427090}
   - component: {fileID: 1001427089}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BrickImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9975,6 +9984,7 @@ MonoBehaviour:
   rb2d: {fileID: 1011283502}
   cl2d: {fileID: 1011283501}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &1013971425
 GameObject:
   m_ObjectHideFlags: 0
@@ -9986,7 +9996,7 @@ GameObject:
   - component: {fileID: 1013971426}
   - component: {fileID: 1013971428}
   - component: {fileID: 1013971427}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BrickImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10701,6 +10711,7 @@ MonoBehaviour:
   rb2d: {fileID: 1077902790}
   cl2d: {fileID: 1077902789}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &1084068794
 GameObject:
   m_ObjectHideFlags: 0
@@ -11248,7 +11259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1136180841}
   - component: {fileID: 1136180842}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ModelUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11956,7 +11967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1248870739}
   - component: {fileID: 1248870740}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ModelUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12129,6 +12140,7 @@ MonoBehaviour:
   rb2d: {fileID: 1251991935}
   cl2d: {fileID: 1251991934}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &1259369188
 GameObject:
   m_ObjectHideFlags: 0
@@ -12269,7 +12281,7 @@ GameObject:
   - component: {fileID: 1275635223}
   - component: {fileID: 1275635225}
   - component: {fileID: 1275635224}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BrickImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12537,7 +12549,7 @@ Transform:
   m_Children:
   - {fileID: 1972826039}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1308188293
 GameObject:
@@ -12989,7 +13001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1331610098}
   - component: {fileID: 1331610099}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ModelUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13328,7 +13340,7 @@ GameObject:
   - component: {fileID: 1388966504}
   - component: {fileID: 1388966506}
   - component: {fileID: 1388966505}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13804,7 +13816,7 @@ GameObject:
   - component: {fileID: 1432584124}
   - component: {fileID: 1432584126}
   - component: {fileID: 1432584125}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BrickImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14074,7 +14086,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446102661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.42, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14764,8 +14776,8 @@ Transform:
   m_LocalScale: {x: 10, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1972826039}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1504310893
 MonoBehaviour:
@@ -14783,6 +14795,9 @@ MonoBehaviour:
   endNumber: 4.4
   step: 0.4
   numbers: []
+  triggerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1507049570
 GameObject:
   m_ObjectHideFlags: 0
@@ -15033,6 +15048,7 @@ MonoBehaviour:
   rb2d: {fileID: 1520035879}
   cl2d: {fileID: 1520035878}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &1526331456
 GameObject:
   m_ObjectHideFlags: 0
@@ -16622,7 +16638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1725049674}
   - component: {fileID: 1725049675}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ModelUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16795,6 +16811,7 @@ MonoBehaviour:
   rb2d: {fileID: 1749131523}
   cl2d: {fileID: 1749131522}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &1768159244
 GameObject:
   m_ObjectHideFlags: 0
@@ -17057,6 +17074,7 @@ MonoBehaviour:
   rb2d: {fileID: 1782721682}
   cl2d: {fileID: 1782721681}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &1786617881
 GameObject:
   m_ObjectHideFlags: 0
@@ -17450,6 +17468,7 @@ MonoBehaviour:
   rb2d: {fileID: 1849465852}
   cl2d: {fileID: 1849465851}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &1853181344
 GameObject:
   m_ObjectHideFlags: 0
@@ -17548,6 +17567,7 @@ MonoBehaviour:
   rb2d: {fileID: 1853181347}
   cl2d: {fileID: 1853181346}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &1868401604
 GameObject:
   m_ObjectHideFlags: 0
@@ -18324,6 +18344,7 @@ MonoBehaviour:
   rb2d: {fileID: 1925663855}
   cl2d: {fileID: 1925663854}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &1933206222
 GameObject:
   m_ObjectHideFlags: 0
@@ -18422,6 +18443,7 @@ MonoBehaviour:
   rb2d: {fileID: 1933206225}
   cl2d: {fileID: 1933206224}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &1935240474
 GameObject:
   m_ObjectHideFlags: 0
@@ -18520,6 +18542,7 @@ MonoBehaviour:
   rb2d: {fileID: 1935240477}
   cl2d: {fileID: 1935240476}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &1938777681
 GameObject:
   m_ObjectHideFlags: 0
@@ -18703,6 +18726,7 @@ MonoBehaviour:
   rb2d: {fileID: 1939300485}
   cl2d: {fileID: 1939300484}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &1952730094
 GameObject:
   m_ObjectHideFlags: 0
@@ -18714,7 +18738,7 @@ GameObject:
   - component: {fileID: 1952730095}
   - component: {fileID: 1952730097}
   - component: {fileID: 1952730096}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BrickImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18877,7 +18901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1963336424}
   - component: {fileID: 1963336425}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ModelUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19006,7 +19030,6 @@ Transform:
   m_Children:
   - {fileID: 214388961}
   - {fileID: 1218615465}
-  - {fileID: 1504310892}
   m_Father: {fileID: 1299972721}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19189,8 +19212,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009929665}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.49, y: 0.72, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19527,6 +19550,7 @@ MonoBehaviour:
   rb2d: {fileID: 2041511242}
   cl2d: {fileID: 2041511241}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &2052664570
 GameObject:
   m_ObjectHideFlags: 0
@@ -20001,7 +20025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102749765}
   - component: {fileID: 2102749766}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ModelUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20254,6 +20278,7 @@ MonoBehaviour:
   rb2d: {fileID: 2108143790}
   cl2d: {fileID: 2108143789}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &2114026127
 GameObject:
   m_ObjectHideFlags: 0
@@ -20432,6 +20457,7 @@ MonoBehaviour:
   rb2d: {fileID: 2114826707}
   cl2d: {fileID: 2114826706}
   isNotifying: 0
+  isNotifyin: 0
 --- !u!1 &2116685438
 GameObject:
   m_ObjectHideFlags: 0

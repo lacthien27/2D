@@ -14,7 +14,9 @@ public class BrickMovement : BrickAbs
      protected override void Start()
     {
         base.Start();
-        IngredientImpact.OnImpactCollision +=ActionStopMovement;
+        IngredientImpact.OnImpactCollision +=ActionStopMovement;        
+        BrickImpact.OnImpactCollision +=ActionStopMovement;
+
 
     }
 
@@ -53,10 +55,14 @@ public class BrickMovement : BrickAbs
     protected virtual void ActionStopMovement()
     {
             this.stopMoved =true;
+                    IngredientImpact.OnImpactCollision -=ActionStopMovement;
+
+
     }
 
     protected void OnDestroy() 
     {
+
         IngredientImpact.OnImpactCollision -=ActionStopMovement;
     }
 
