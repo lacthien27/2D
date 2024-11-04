@@ -11,9 +11,9 @@ public class ModelCompleteCtrl : BrickAbs
 
 [SerializeField]  protected List<IngredientImpact> ingredientImpacts = new List<IngredientImpact>();
 
-    public static event Action OnImpactStart;
+    public static event Action OnSpawnSignal;  // only 1 signal dù  a lot ingredients impact
 
-        [SerializeField]  protected  bool isNotifying = false;
+    [SerializeField]  protected  bool isNotifying = false;
 
 
 
@@ -22,6 +22,7 @@ public class ModelCompleteCtrl : BrickAbs
     {
         base.Start();
         IngredientImpact.OnImpactCollision+=HandleTrigger;
+                 ingredientImpacts.AddRange(GetComponentsInChildren<IngredientImpact>());
 
     }
 
@@ -29,37 +30,31 @@ public class ModelCompleteCtrl : BrickAbs
     {
         base.LoadComponents();
       
-         ingredientImpacts.AddRange(GetComponentsInChildren<IngredientImpact>());
-
      
     }
 
-
-
        protected virtual void HandleTrigger()
     {
+        
+        //combine 2 loop will cause some IngredientImpact  not switch state
            foreach (IngredientImpact ingredientImpact in ingredientImpacts)
         {
+                if(ingredientImpact==null) return;
                 ingredientImpact.gameObject.layer =LayerMask.NameToLayer("IngredientImpact");
                 ingredientImpact.Collider2D.isTrigger=false;
-              
-              
-              //
-              
-                if(ingredientImpact.Collider2D.isTrigger==true) return;
-                 if (isNotifying) return;
-                   isNotifying = true;
-                    Debug.LogWarning("1");
-                    OnImpactStart?.Invoke();
-
-                }
-
         }
 
+       foreach ( IngredientImpact ingredientImpact1 in ingredientImpacts)
+        {
+            
+               if(ingredientImpact1.Collider2D.isTrigger==true) return; //yet optimize , 
+                 if (isNotifying) return;
+                   isNotifying = true;
+                    OnSpawnSignal?.Invoke();
+        }
 
+    }
 
-        
-    
 
     protected virtual void OnDestroy()
     {

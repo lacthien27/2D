@@ -183,8 +183,8 @@ GameObject:
   - component: {fileID: 6633795}
   - component: {fileID: 6633797}
   - component: {fileID: 6633796}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,7 +199,7 @@ Transform:
   m_GameObject: {fileID: 6633794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 434899170}
@@ -215,7 +215,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -239,7 +239,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6633794}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -375,7 +375,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -697,6 +697,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &65428705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 65428707}
+  - component: {fileID: 65428706}
+  m_Layer: 0
+  m_Name: DestroyObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &65428706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65428705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de89782f21af72d49b718d6569c57fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &65428707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65428705}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.3959596, y: 0.06000133, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1890794240}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &70400297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1283,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1890794240}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &110232862
 BoxCollider2D:
@@ -1301,11 +1345,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 1890794241}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 110232863}
   cl2d: {fileID: 110232862}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &116271288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,12 +1375,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116271288}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.49, y: 0.72, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 4.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1130923043}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &116271290
 MonoBehaviour:
@@ -1467,7 +1511,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1130923043}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &148411783
 SpriteRenderer:
@@ -1551,7 +1595,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1890794240}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &152678208
 SpriteRenderer:
@@ -1818,7 +1862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202098695}
   - component: {fileID: 202098696}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2081,8 +2125,8 @@ GameObject:
   - component: {fileID: 213523401}
   - component: {fileID: 213523403}
   - component: {fileID: 213523402}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2097,7 +2141,7 @@ Transform:
   m_GameObject: {fileID: 213523400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 240047055}
@@ -2113,7 +2157,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2137,7 +2181,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213523400}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2255,7 +2299,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2351,7 +2395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 240047055}
   - component: {fileID: 240047056}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2485,7 +2529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 241342642}
   - component: {fileID: 241342643}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2570,7 +2614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 261468695}
   - component: {fileID: 261468696}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2655,7 +2699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 270641180}
   - component: {fileID: 270641181}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2760,7 +2804,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 576275137}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &279380213
 SpriteRenderer:
@@ -2989,7 +3033,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3096,7 +3140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317736370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: -0.4, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3277,11 +3321,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 590116487}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 342499028}
   cl2d: {fileID: 342499027}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &357551828
 GameObject:
   m_ObjectHideFlags: 0
@@ -3683,7 +3727,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371006462}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.76, y: 1.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3712,6 +3756,50 @@ MonoBehaviour:
   brickMovement: {fileID: 240699381}
   brickRotate: {fileID: 79275210}
   modelComplete: {fileID: 1657421853}
+--- !u!1 &377560887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377560888}
+  - component: {fileID: 377560889}
+  m_Layer: 0
+  m_Name: 'DestroyObj  '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &377560888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377560887}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.9959596, y: -0.33999866, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1984056652}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &377560889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377560887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de89782f21af72d49b718d6569c57fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &379380675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3843,7 +3931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brickCtrl: {fileID: 2009929667}
-  speedMove: 0.03
+  speedMove: 0.005
   target: {fileID: 320754077}
   stopMoved: 0
 --- !u!1 &400805572
@@ -4075,7 +4163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 434899170}
   - component: {fileID: 434899171}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4199,11 +4287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brickCtrl: {fileID: 1446102663}
-  ingredientImpacts:
-  - {fileID: 874180820}
-  - {fileID: 2041511243}
-  - {fileID: 2114826708}
-  - {fileID: 110232864}
+  ingredientImpacts: []
+  isNotifying: 0
 --- !u!1 &444983999
 GameObject:
   m_ObjectHideFlags: 0
@@ -4215,8 +4300,8 @@ GameObject:
   - component: {fileID: 444984000}
   - component: {fileID: 444984002}
   - component: {fileID: 444984001}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4231,7 +4316,7 @@ Transform:
   m_GameObject: {fileID: 444983999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 202098695}
@@ -4247,7 +4332,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4271,7 +4356,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444983999}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4412,7 +4497,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4742,7 +4827,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4809,7 +4894,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1984056652}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &502419152
 SpriteRenderer:
@@ -4874,8 +4959,8 @@ GameObject:
   - component: {fileID: 505509016}
   - component: {fileID: 505509018}
   - component: {fileID: 505509017}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4890,7 +4975,7 @@ Transform:
   m_GameObject: {fileID: 505509015}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 601274833}
@@ -4906,7 +4991,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4930,7 +5015,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505509015}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -5321,7 +5406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 563028177}
   - component: {fileID: 563028178}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5407,8 +5492,8 @@ GameObject:
   - component: {fileID: 563307055}
   - component: {fileID: 563307057}
   - component: {fileID: 563307056}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5423,7 +5508,7 @@ Transform:
   m_GameObject: {fileID: 563307054}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1429345664}
@@ -5439,7 +5524,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5463,7 +5548,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563307054}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -5505,6 +5590,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 634979590}
   - {fileID: 2062625821}
   - {fileID: 965611599}
   - {fileID: 279380212}
@@ -5835,11 +5921,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 1205879593}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 586454473}
   cl2d: {fileID: 586454472}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &590116485
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,8 +6032,8 @@ GameObject:
   - component: {fileID: 592747489}
   - component: {fileID: 592747491}
   - component: {fileID: 592747490}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5962,7 +6048,7 @@ Transform:
   m_GameObject: {fileID: 592747488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1711860505}
@@ -5978,7 +6064,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6002,7 +6088,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592747488}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -6025,7 +6111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 601274833}
   - component: {fileID: 601274834}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6254,7 +6340,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6385,11 +6471,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 666701554}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 628831504}
   cl2d: {fileID: 628831503}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
+--- !u!1 &634979589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 634979590}
+  - component: {fileID: 634979591}
+  m_Layer: 6
+  m_Name: DestroyObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &634979590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634979589}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.405, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 576275137}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &634979591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634979589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de89782f21af72d49b718d6569c57fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &635402883
 GameObject:
   m_ObjectHideFlags: 0
@@ -6618,8 +6748,8 @@ GameObject:
   - component: {fileID: 656217984}
   - component: {fileID: 656217986}
   - component: {fileID: 656217985}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6634,7 +6764,7 @@ Transform:
   m_GameObject: {fileID: 656217983}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1056926200}
@@ -6650,7 +6780,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6674,7 +6804,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656217983}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -6825,7 +6955,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6891,6 +7021,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1115503889}
   - {fileID: 1791506586}
   - {fileID: 874180817}
   - {fileID: 1768159245}
@@ -6954,7 +7085,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -7004,7 +7135,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPointBrick
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -7029,14 +7160,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692546854}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.03, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2075268400}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1299972721}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &695953110
 GameObject:
@@ -7492,8 +7623,8 @@ GameObject:
   - component: {fileID: 748603469}
   - component: {fileID: 748603471}
   - component: {fileID: 748603470}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7508,7 +7639,7 @@ Transform:
   m_GameObject: {fileID: 748603468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2081410863}
@@ -7524,7 +7655,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -7548,7 +7679,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748603468}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -7740,11 +7871,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 415185643}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 780965872}
   cl2d: {fileID: 780965871}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &792156083
 GameObject:
   m_ObjectHideFlags: 0
@@ -7756,8 +7887,8 @@ GameObject:
   - component: {fileID: 792156084}
   - component: {fileID: 792156086}
   - component: {fileID: 792156085}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7772,7 +7903,7 @@ Transform:
   m_GameObject: {fileID: 792156083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1461662009}
@@ -7788,7 +7919,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -7812,7 +7943,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792156083}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -7953,7 +8084,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -8131,8 +8262,8 @@ GameObject:
   - component: {fileID: 835765523}
   - component: {fileID: 835765525}
   - component: {fileID: 835765524}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8147,7 +8278,7 @@ Transform:
   m_GameObject: {fileID: 835765522}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 270641180}
@@ -8163,7 +8294,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -8187,7 +8318,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835765522}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -8312,11 +8443,11 @@ Transform:
   m_GameObject: {fileID: 874180816}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.405, z: 0.1}
+  m_LocalScale: {x: 0.1, y: 0.405, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 690169246}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &874180818
 BoxCollider2D:
@@ -8378,11 +8509,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 690169247}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 874180819}
   cl2d: {fileID: 874180818}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &901198341
 GameObject:
   m_ObjectHideFlags: 0
@@ -8408,7 +8539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901198341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.371, y: -1.826, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8527,7 +8658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 920441779}
   - component: {fileID: 920441780}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8776,11 +8907,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 714702126}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 938950681}
   cl2d: {fileID: 938950680}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &956102742
 GameObject:
   m_ObjectHideFlags: 0
@@ -9032,7 +9163,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 576275137}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &965611600
 Rigidbody2D:
@@ -9094,11 +9225,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 576275138}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 965611600}
   cl2d: {fileID: 965611601}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &977046958
 GameObject:
   m_ObjectHideFlags: 0
@@ -9295,9 +9426,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986274937}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.405, z: 0.1}
+  m_LocalScale: {x: 0.1, y: 0.405, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 991195878}
@@ -9363,11 +9494,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 991195879}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 986274940}
   cl2d: {fileID: 986274939}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &988626878
 GameObject:
   m_ObjectHideFlags: 0
@@ -9422,6 +9553,7 @@ MonoBehaviour:
   - {fileID: 1933206226}
   - {fileID: 1011283503}
   - {fileID: 1853181348}
+  isNotifying: 0
 --- !u!1 &991195877
 GameObject:
   m_ObjectHideFlags: 0
@@ -9811,7 +9943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1005863419}
   - component: {fileID: 1005863420}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9980,11 +10112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 0}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 1011283502}
   cl2d: {fileID: 1011283501}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &1013971425
 GameObject:
   m_ObjectHideFlags: 0
@@ -10076,8 +10208,8 @@ GameObject:
   - component: {fileID: 1017811407}
   - component: {fileID: 1017811409}
   - component: {fileID: 1017811408}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10092,7 +10224,7 @@ Transform:
   m_GameObject: {fileID: 1017811406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 563028177}
@@ -10108,7 +10240,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10132,7 +10264,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017811406}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -10324,7 +10456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1056926200}
   - component: {fileID: 1056926201}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10442,7 +10574,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10504,7 +10636,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061484082}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.763, y: -1.313, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10544,8 +10676,8 @@ GameObject:
   - component: {fileID: 1062838755}
   - component: {fileID: 1062838757}
   - component: {fileID: 1062838756}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10560,7 +10692,7 @@ Transform:
   m_GameObject: {fileID: 1062838754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 261468695}
@@ -10576,7 +10708,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10600,7 +10732,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062838754}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -10613,6 +10745,55 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1072347710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1072347711}
+  - component: {fileID: 1072347713}
+  m_Layer: 0
+  m_Name: Raycast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1072347711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072347710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1072347713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072347710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8343f26fc2aefc94793282b10631aa39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startNumber: -4
+  endNumber: 4.4
+  step: 0.4
+  numbers: []
+  objectsToDestroy: []
 --- !u!1 &1077902787
 GameObject:
   m_ObjectHideFlags: 0
@@ -10707,11 +10888,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 1596471630}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 1077902790}
   cl2d: {fileID: 1077902789}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &1084068794
 GameObject:
   m_ObjectHideFlags: 0
@@ -10928,7 +11109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1099677934}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackGroundRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11031,8 +11212,8 @@ GameObject:
   - component: {fileID: 1108493213}
   - component: {fileID: 1108493215}
   - component: {fileID: 1108493214}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11047,7 +11228,7 @@ Transform:
   m_GameObject: {fileID: 1108493212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1814703128}
@@ -11063,7 +11244,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -11087,7 +11268,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108493212}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -11100,6 +11281,50 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1115503888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1115503889}
+  - component: {fileID: 1115503890}
+  m_Layer: 0
+  m_Name: 'DestroyObj   '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1115503889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115503888}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.9959596, y: 0.060001343, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 690169246}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1115503890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115503888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de89782f21af72d49b718d6569c57fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1119250306
 GameObject:
   m_ObjectHideFlags: 0
@@ -11200,6 +11425,7 @@ MonoBehaviour:
   - {fileID: 1939300486}
   - {fileID: 986274941}
   - {fileID: 1849465853}
+  isNotifying: 0
 --- !u!1 &1130923042
 GameObject:
   m_ObjectHideFlags: 0
@@ -11229,6 +11455,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1338090310}
   - {fileID: 116271289}
   - {fileID: 2114826705}
   - {fileID: 148411782}
@@ -11345,8 +11572,8 @@ GameObject:
   - component: {fileID: 1185534163}
   - component: {fileID: 1185534165}
   - component: {fileID: 1185534164}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11361,7 +11588,7 @@ Transform:
   m_GameObject: {fileID: 1185534162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1938777682}
@@ -11377,7 +11604,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -11401,7 +11628,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185534162}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -11675,7 +11902,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -11745,7 +11972,6 @@ Transform:
   - {fileID: 1446102662}
   - {fileID: 1061484083}
   - {fileID: 901198342}
-  - {fileID: 1599125253}
   m_Father: {fileID: 1972826039}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12136,11 +12362,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 328442034}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 1251991935}
   cl2d: {fileID: 1251991934}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &1259369188
 GameObject:
   m_ObjectHideFlags: 0
@@ -12201,8 +12427,8 @@ GameObject:
   - component: {fileID: 1270906345}
   - component: {fileID: 1270906347}
   - component: {fileID: 1270906346}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12217,7 +12443,7 @@ Transform:
   m_GameObject: {fileID: 1270906344}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1455191548}
@@ -12233,7 +12459,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -12257,7 +12483,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270906344}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -12548,6 +12774,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1972826039}
+  - {fileID: 692546856}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12575,7 +12802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308188293}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: 0.2, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12625,7 +12852,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -12756,7 +12983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1325387896}
   - component: {fileID: 1325387897}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12842,8 +13069,8 @@ GameObject:
   - component: {fileID: 1326346675}
   - component: {fileID: 1326346677}
   - component: {fileID: 1326346676}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12858,7 +13085,7 @@ Transform:
   m_GameObject: {fileID: 1326346674}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 920441779}
@@ -12874,7 +13101,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -12898,7 +13125,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326346674}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -12954,7 +13181,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13087,8 +13314,8 @@ GameObject:
   - component: {fileID: 1331911744}
   - component: {fileID: 1331911746}
   - component: {fileID: 1331911745}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13103,7 +13330,7 @@ Transform:
   m_GameObject: {fileID: 1331911743}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2132591007}
@@ -13119,7 +13346,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13143,7 +13370,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331911743}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -13156,6 +13383,50 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1338090309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338090310}
+  - component: {fileID: 1338090311}
+  m_Layer: 0
+  m_Name: 'DestroyObj '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1338090310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338090309}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5959597, y: 0.06000133, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1130923043}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1338090311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338090309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de89782f21af72d49b718d6569c57fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1371337535
 GameObject:
   m_ObjectHideFlags: 0
@@ -13292,7 +13563,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13535,7 +13806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1429345664}
   - component: {fileID: 1429345665}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13653,7 +13924,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14086,7 +14357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446102661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.42, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14126,8 +14397,8 @@ GameObject:
   - component: {fileID: 1446230792}
   - component: {fileID: 1446230794}
   - component: {fileID: 1446230793}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14142,7 +14413,7 @@ Transform:
   m_GameObject: {fileID: 1446230791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 241342642}
@@ -14158,7 +14429,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14182,7 +14453,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446230791}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -14236,7 +14507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1455191548}
   - component: {fileID: 1455191549}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14406,7 +14677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1461662009}
   - component: {fileID: 1461662010}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14491,7 +14762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1468861458}
   - component: {fileID: 1468861459}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14726,12 +14997,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498453035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.6899996, y: 0.72, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 4.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1890794240}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1498453037
 MonoBehaviour:
@@ -14747,57 +15018,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 0}
   angle: 0
---- !u!1 &1504310890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1504310892}
-  - component: {fileID: 1504310893}
-  m_Layer: 0
-  m_Name: RaycastMove
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1504310892
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504310890}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.4, y: -4, z: 0}
-  m_LocalScale: {x: 10, y: 0.1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1504310893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504310890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8343f26fc2aefc94793282b10631aa39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startNumber: -4
-  endNumber: 4.4
-  step: 0.4
-  numbers: []
-  triggerLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &1507049570
 GameObject:
   m_ObjectHideFlags: 0
@@ -14946,10 +15166,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brickCtrl: {fileID: 2009929667}
   ingredientImpacts:
-  - {fileID: 965611602}
-  - {fileID: 1749131524}
-  - {fileID: 628831505}
-  - {fileID: 1251991936}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  isNotifying: 0
 --- !u!1 &1520035876
 GameObject:
   m_ObjectHideFlags: 0
@@ -15044,11 +15265,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 1085183622}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 1520035879}
   cl2d: {fileID: 1520035878}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &1526331456
 GameObject:
   m_ObjectHideFlags: 0
@@ -15138,7 +15359,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15315,7 +15536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1552430614}
   - component: {fileID: 1552430615}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15690,8 +15911,8 @@ GameObject:
   - component: {fileID: 1597527114}
   - component: {fileID: 1597527116}
   - component: {fileID: 1597527115}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15706,7 +15927,7 @@ Transform:
   m_GameObject: {fileID: 1597527113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1468861458}
@@ -15722,7 +15943,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15746,7 +15967,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597527113}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -15784,15 +16005,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599125252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.7, y: -3.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1120725711}
   - {fileID: 2064603020}
   - {fileID: 289596382}
-  m_Father: {fileID: 1218615465}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1599125254
 MonoBehaviour:
@@ -15902,7 +16123,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16223,6 +16444,7 @@ MonoBehaviour:
   - {fileID: 1520035880}
   - {fileID: 342499029}
   - {fileID: 586454474}
+  isNotifying: 0
 --- !u!1 &1661934094
 GameObject:
   m_ObjectHideFlags: 0
@@ -16325,6 +16547,7 @@ MonoBehaviour:
   - {fileID: 1077902791}
   - {fileID: 780965873}
   - {fileID: 1935240478}
+  isNotifying: 0
 --- !u!1 &1679778790
 GameObject:
   m_ObjectHideFlags: 0
@@ -16553,7 +16776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1711860505}
   - component: {fileID: 1711860506}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16807,11 +17030,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 1644267613}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 1749131523}
   cl2d: {fileID: 1749131522}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &1768159244
 GameObject:
   m_ObjectHideFlags: 0
@@ -16842,7 +17065,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 690169246}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1768159246
 SpriteRenderer:
@@ -16907,8 +17130,8 @@ GameObject:
   - component: {fileID: 1768816426}
   - component: {fileID: 1768816428}
   - component: {fileID: 1768816427}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16923,7 +17146,7 @@ Transform:
   m_GameObject: {fileID: 1768816425}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1005863419}
@@ -16939,7 +17162,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16963,7 +17186,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768816425}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -17070,11 +17293,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 226501055}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 1782721682}
   cl2d: {fileID: 1782721681}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &1786617881
 GameObject:
   m_ObjectHideFlags: 0
@@ -17118,7 +17341,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17180,12 +17403,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791506585}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.0899997, y: 0.72, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 4.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 690169246}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1791506587
 MonoBehaviour:
@@ -17295,7 +17518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1814703128}
   - component: {fileID: 1814703129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17464,11 +17687,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 635402885}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 1849465852}
   cl2d: {fileID: 1849465851}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &1853181344
 GameObject:
   m_ObjectHideFlags: 0
@@ -17563,11 +17786,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 1259369190}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 1853181347}
   cl2d: {fileID: 1853181346}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &1868401604
 GameObject:
   m_ObjectHideFlags: 0
@@ -17773,7 +17996,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17839,6 +18062,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 65428707}
   - {fileID: 1498453036}
   - {fileID: 110232861}
   - {fileID: 152678207}
@@ -17870,8 +18094,8 @@ GameObject:
   - component: {fileID: 1898821576}
   - component: {fileID: 1898821578}
   - component: {fileID: 1898821577}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17886,7 +18110,7 @@ Transform:
   m_GameObject: {fileID: 1898821575}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1325387896}
@@ -17902,7 +18126,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17926,7 +18150,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898821575}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -18258,7 +18482,7 @@ GameObject:
   - component: {fileID: 1925663855}
   - component: {fileID: 1925663854}
   - component: {fileID: 1925663856}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18290,7 +18514,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18340,11 +18564,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 1584497023}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 1925663855}
   cl2d: {fileID: 1925663854}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &1933206222
 GameObject:
   m_ObjectHideFlags: 0
@@ -18439,11 +18663,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 1508740700}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 1933206225}
   cl2d: {fileID: 1933206224}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &1935240474
 GameObject:
   m_ObjectHideFlags: 0
@@ -18538,11 +18762,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 2417492}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 1935240477}
   cl2d: {fileID: 1935240476}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &1938777681
 GameObject:
   m_ObjectHideFlags: 0
@@ -18553,7 +18777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1938777682}
   - component: {fileID: 1938777683}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18722,11 +18946,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 1507049572}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 1939300485}
   cl2d: {fileID: 1939300484}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &1952730094
 GameObject:
   m_ObjectHideFlags: 0
@@ -19009,12 +19233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holder: {fileID: 214388961}
   prefabs:
-  - {fileID: 2009929666}
-  - {fileID: 371006463}
   - {fileID: 1446102662}
-  - {fileID: 1061484083}
-  - {fileID: 901198342}
-  - {fileID: 1599125253}
   poolObjs: []
 --- !u!4 &1972826039
 Transform:
@@ -19088,6 +19307,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 377560888}
   - {fileID: 2137453774}
   - {fileID: 2041511240}
   - {fileID: 502419151}
@@ -19151,7 +19371,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -19480,11 +19700,11 @@ Transform:
   m_GameObject: {fileID: 2041511239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.405, z: 0.1}
+  m_LocalScale: {x: 0.1, y: 0.405, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1984056652}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2041511241
 BoxCollider2D:
@@ -19546,11 +19766,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 1984056653}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 2041511242}
   cl2d: {fileID: 2041511241}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &2052664570
 GameObject:
   m_ObjectHideFlags: 0
@@ -19666,7 +19886,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 576275137}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2062625822
 MonoBehaviour:
@@ -19778,7 +19998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2075268400
 Transform:
   m_ObjectHideFlags: 0
@@ -19856,7 +20076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2081410863}
   - component: {fileID: 2081410864}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20143,8 +20363,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -20274,11 +20494,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 956102744}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 2108143790}
   cl2d: {fileID: 2108143789}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &2114026127
 GameObject:
   m_ObjectHideFlags: 0
@@ -20322,7 +20542,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -20391,7 +20611,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1130923043}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2114826706
 BoxCollider2D:
@@ -20453,11 +20673,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientCtrl: {fileID: 1130923044}
-  setLocalScale: {x: 0.1, y: 0.405, z: 0.1}
   rb2d: {fileID: 2114826707}
   cl2d: {fileID: 2114826706}
-  isNotifying: 0
-  isNotifyin: 0
+  isSignalOfEnter: 0
+  isSignalOfExit: 0
+  isTrigger: 0
 --- !u!1 &2116685438
 GameObject:
   m_ObjectHideFlags: 0
@@ -20515,8 +20735,8 @@ GameObject:
   - component: {fileID: 2125414101}
   - component: {fileID: 2125414103}
   - component: {fileID: 2125414102}
-  m_Layer: 0
-  m_Name: BrickImpact
+  m_Layer: 7
+  m_Name: WallImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20531,7 +20751,7 @@ Transform:
   m_GameObject: {fileID: 2125414100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.05, y: 4.05, z: 1}
+  m_LocalScale: {x: 4.05, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1552430614}
@@ -20547,7 +20767,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -20571,7 +20791,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125414100}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -20594,7 +20814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2132591007}
   - component: {fileID: 2132591008}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20740,12 +20960,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137453773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.0899997, y: 0.32000002, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 4.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1984056652}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2137453775
 MonoBehaviour:
