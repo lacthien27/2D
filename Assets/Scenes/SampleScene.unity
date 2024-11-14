@@ -1263,7 +1263,7 @@ GameObject:
   - component: {fileID: 110232863}
   - component: {fileID: 110232862}
   - component: {fileID: 110232864}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1295,7 +1295,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1348,8 +1348,6 @@ MonoBehaviour:
   rb2d: {fileID: 110232863}
   cl2d: {fileID: 110232862}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &116271288
 GameObject:
   m_ObjectHideFlags: 0
@@ -3324,8 +3322,6 @@ MonoBehaviour:
   rb2d: {fileID: 342499028}
   cl2d: {fileID: 342499027}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &357551828
 GameObject:
   m_ObjectHideFlags: 0
@@ -5924,8 +5920,6 @@ MonoBehaviour:
   rb2d: {fileID: 586454473}
   cl2d: {fileID: 586454472}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &590116485
 GameObject:
   m_ObjectHideFlags: 0
@@ -6474,8 +6468,6 @@ MonoBehaviour:
   rb2d: {fileID: 628831504}
   cl2d: {fileID: 628831503}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &634979589
 GameObject:
   m_ObjectHideFlags: 0
@@ -7874,8 +7866,6 @@ MonoBehaviour:
   rb2d: {fileID: 780965872}
   cl2d: {fileID: 780965871}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &792156083
 GameObject:
   m_ObjectHideFlags: 0
@@ -8427,7 +8417,7 @@ GameObject:
   - component: {fileID: 874180819}
   - component: {fileID: 874180818}
   - component: {fileID: 874180820}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8459,7 +8449,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -8512,8 +8502,6 @@ MonoBehaviour:
   rb2d: {fileID: 874180819}
   cl2d: {fileID: 874180818}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &901198341
 GameObject:
   m_ObjectHideFlags: 0
@@ -8910,8 +8898,6 @@ MonoBehaviour:
   rb2d: {fileID: 938950681}
   cl2d: {fileID: 938950680}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &956102742
 GameObject:
   m_ObjectHideFlags: 0
@@ -9228,8 +9214,6 @@ MonoBehaviour:
   rb2d: {fileID: 965611600}
   cl2d: {fileID: 965611601}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &977046958
 GameObject:
   m_ObjectHideFlags: 0
@@ -9497,8 +9481,6 @@ MonoBehaviour:
   rb2d: {fileID: 986274940}
   cl2d: {fileID: 986274939}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &988626878
 GameObject:
   m_ObjectHideFlags: 0
@@ -10115,8 +10097,6 @@ MonoBehaviour:
   rb2d: {fileID: 1011283502}
   cl2d: {fileID: 1011283501}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &1013971425
 GameObject:
   m_ObjectHideFlags: 0
@@ -10891,8 +10871,6 @@ MonoBehaviour:
   rb2d: {fileID: 1077902790}
   cl2d: {fileID: 1077902789}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &1084068794
 GameObject:
   m_ObjectHideFlags: 0
@@ -12365,8 +12343,6 @@ MonoBehaviour:
   rb2d: {fileID: 1251991935}
   cl2d: {fileID: 1251991934}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &1259369188
 GameObject:
   m_ObjectHideFlags: 0
@@ -15268,8 +15244,6 @@ MonoBehaviour:
   rb2d: {fileID: 1520035879}
   cl2d: {fileID: 1520035878}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &1526331456
 GameObject:
   m_ObjectHideFlags: 0
@@ -17033,8 +17007,6 @@ MonoBehaviour:
   rb2d: {fileID: 1749131523}
   cl2d: {fileID: 1749131522}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &1768159244
 GameObject:
   m_ObjectHideFlags: 0
@@ -17296,8 +17268,6 @@ MonoBehaviour:
   rb2d: {fileID: 1782721682}
   cl2d: {fileID: 1782721681}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &1786617881
 GameObject:
   m_ObjectHideFlags: 0
@@ -17690,8 +17660,6 @@ MonoBehaviour:
   rb2d: {fileID: 1849465852}
   cl2d: {fileID: 1849465851}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &1853181344
 GameObject:
   m_ObjectHideFlags: 0
@@ -17789,8 +17757,6 @@ MonoBehaviour:
   rb2d: {fileID: 1853181347}
   cl2d: {fileID: 1853181346}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &1868401604
 GameObject:
   m_ObjectHideFlags: 0
@@ -18567,8 +18533,6 @@ MonoBehaviour:
   rb2d: {fileID: 1925663855}
   cl2d: {fileID: 1925663854}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &1933206222
 GameObject:
   m_ObjectHideFlags: 0
@@ -18666,8 +18630,6 @@ MonoBehaviour:
   rb2d: {fileID: 1933206225}
   cl2d: {fileID: 1933206224}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &1935240474
 GameObject:
   m_ObjectHideFlags: 0
@@ -18765,8 +18727,6 @@ MonoBehaviour:
   rb2d: {fileID: 1935240477}
   cl2d: {fileID: 1935240476}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &1938777681
 GameObject:
   m_ObjectHideFlags: 0
@@ -18949,8 +18909,6 @@ MonoBehaviour:
   rb2d: {fileID: 1939300485}
   cl2d: {fileID: 1939300484}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &1952730094
 GameObject:
   m_ObjectHideFlags: 0
@@ -19684,7 +19642,7 @@ GameObject:
   - component: {fileID: 2041511242}
   - component: {fileID: 2041511241}
   - component: {fileID: 2041511243}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19716,7 +19674,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -19769,8 +19727,6 @@ MonoBehaviour:
   rb2d: {fileID: 2041511242}
   cl2d: {fileID: 2041511241}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &2052664570
 GameObject:
   m_ObjectHideFlags: 0
@@ -20497,8 +20453,6 @@ MonoBehaviour:
   rb2d: {fileID: 2108143790}
   cl2d: {fileID: 2108143789}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &2114026127
 GameObject:
   m_ObjectHideFlags: 0
@@ -20591,7 +20545,7 @@ GameObject:
   - component: {fileID: 2114826707}
   - component: {fileID: 2114826706}
   - component: {fileID: 2114826708}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: IngredientImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20623,7 +20577,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -20676,8 +20630,6 @@ MonoBehaviour:
   rb2d: {fileID: 2114826707}
   cl2d: {fileID: 2114826706}
   isSignalOfEnter: 0
-  isSignalOfExit: 0
-  isTrigger: 0
 --- !u!1 &2116685438
 GameObject:
   m_ObjectHideFlags: 0

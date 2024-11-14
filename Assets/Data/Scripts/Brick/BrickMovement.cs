@@ -18,7 +18,6 @@ public class BrickMovement : BrickAbs
     {
         base.Start();
         IngredientImpact.OnImpactCollision +=ActionStopMovement;        
-                            IngredientImpact.OnExitCollision +=ActionActiveMovement;
 
     }
 
@@ -61,7 +60,6 @@ public class BrickMovement : BrickAbs
     protected virtual void ActionStopMovement()
     {
            this.stopMoved =true;
-           Debug.Log("stand");
          
     }
 
@@ -82,7 +80,6 @@ public class BrickMovement : BrickAbs
     {
 
         IngredientImpact.OnImpactCollision -=ActionStopMovement;
-              IngredientImpact.OnExitCollision -=ActionActiveMovement;
 
     }
 

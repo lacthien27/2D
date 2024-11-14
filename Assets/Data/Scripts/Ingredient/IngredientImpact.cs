@@ -10,7 +10,7 @@ public class IngredientImpact : IngredientAbs
 {
     public static event Action OnImpactCollision;  // how much  ingredient impact is relative  signal;
 
-     //   public static event Action OnExitCollision; //yet use // how much  ingredient impact is relative  signal;
+   //     public static event Action OnExitCollision; //yet use // how much  ingredient impact is relative  signal;
 
      [SerializeField] protected Rigidbody2D rb2d;
     public Rigidbody2D Rigidbody2D => rb2d;
@@ -21,19 +21,8 @@ public class IngredientImpact : IngredientAbs
 
     
     [SerializeField]  protected  bool isSignalOfEnter = false;
-        [SerializeField]  protected  bool isSignalOfExit = false;
 
 
-
-    [SerializeField] protected  bool isTrigger =false;
-
-    protected void Update() 
-    {
-        if(this.isTrigger) this.Handle();
-        
-
-        
-    }
 
     protected virtual void Settings()
     {
@@ -66,57 +55,25 @@ public class IngredientImpact : IngredientAbs
         Debug.LogWarning(transform.name + " : LoadRigidbody2D ", gameObject);
     }
     protected void OnTriggerEnter2D(Collider2D other)
+    
     {
-       
-        if (other.gameObject.layer == gameObject.layer)  return; //avoid ingredient from colliding with each other
+        if (other.gameObject.layer == transform.gameObject.layer)  return; //avoid ingredient from colliding with each other
          
         if(other.transform.parent.name=="IngredientCtrl"||other.transform.parent.name=="ModelUnder") 
         {
-        
-
+    
         if (isSignalOfEnter) return;
+                    Debug.LogWarning("1");
 
             isSignalOfEnter = true;
            if(OnImpactCollision!=null) OnImpactCollision?.Invoke(); // get signal to ModelCompleteCtrl to check trigger
-           this.isTrigger=true;
+           
         }
-
-     /**   if(other.transform.parent.name=="Model") 
-        {
-            OnImpactSideWall?.Invoke();
-
-              // Lấy thông tin về va chạm
-            ContactPoint2D[] contactPoints = new ContactPoint2D[1];
-            other.GetContacts(contactPoints);
-
-             Vector2 contactPoint = contactPoints[0].point;
-
-            this.posImpact =contactPoint;
-        Debug.Log("Vị trí va chạm: " + this.posImpact);
-        Debug.Log(contactPoint);
-
-
-         }**/
 
     }
 
-    /**        protected  void OnTriggerExit2D(Collider2D other)
-        {   
 
-             if (other.gameObject.layer == gameObject.layer)  return; //avoid ingredient from colliding with each other
-            if(other.transform.parent.name=="IngredientCtrl"||other.transform.parent.name=="ModelUnder") 
-             {   
-
-                    if (isSignalOfExit) return;
-                 isSignalOfExit = false;
-                            if(OnExitCollision!=null) OnExitCollision?.Invoke();
-
-                this.isTrigger=false;
-            }
-
-        }
-
-    **/
+  //  protected void 
 
         protected virtual void Handle()
         {
