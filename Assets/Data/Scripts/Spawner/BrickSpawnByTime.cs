@@ -10,7 +10,8 @@ public class BrickSpawnByTime : GameAbs
 {
     protected override void Start()
     {
-      ModelCompleteCtrl.OnSpawnSignal+=ImplementSpawn;
+     // Raycast.SignalSpawnBrick+=ImplementSpawn;
+   // ModelCompleteCtrl.OnSpawnSignal+=ImplementSpawn;
       this.ImplementSpawn();  
     }
     protected virtual void ImplementSpawn()
@@ -22,7 +23,7 @@ public class BrickSpawnByTime : GameAbs
   
     protected virtual  void OnDestroy() 
     {
-            ModelCompleteCtrl.OnSpawnSignal-=ImplementSpawn;
+         //  Raycast.SignalSpawnBrick-=ImplementSpawn;
 
     }
 

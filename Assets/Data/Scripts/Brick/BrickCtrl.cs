@@ -5,10 +5,6 @@ using System.Linq;
 
 public class BrickCtrl : ThienMonoBehaviour
 {
-  
-
-
-
     [SerializeField] protected bool isSpawnBrick = false;
 
     [SerializeField] protected bool isExistingBrick = false;
@@ -18,31 +14,47 @@ public class BrickCtrl : ThienMonoBehaviour
     [SerializeField] protected bool isPetrified  =false;
 
 
-    [SerializeField] protected BrickMovement brickMovement;
-    public BrickMovement  BrickMovement => brickMovement;
 
 
     [SerializeField] protected BrickRotate brickRotate;
 
     public BrickRotate  BrickRotate => brickRotate;
 
+    [SerializeField] protected StateMachineCtrl stateMachineCtrl;
 
-    [SerializeField] public Transform modelComplete;
+    public StateMachineCtrl  StateMachineCtrl => stateMachineCtrl;
+
+
+//    [SerializeField] public Transform modelCompleteCtrl;
+
+    [SerializeField] protected ModelCompleteCtrl modelCompleteCtrl;
+
+    public ModelCompleteCtrl  ModelCompleteCtrl => modelCompleteCtrl;
+
+
+    
    
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        this.LoadBrickMovement();
         this.LoadBrickRotate();
-        this.LoadModelComplete();
-
+        this.LoadModelCompleteCtrl();
+        this.LoadStateMachineCtrl();
     }
 
-      protected virtual void LoadModelComplete()
+    /** protected virtual void LoadModelComplete()
     {
         if(this.modelComplete !=null) return;
         this.modelComplete =transform.Find("ModelComplete");
         Debug.LogWarning(transform.name +" : LoadModelComplete ",gameObject);
+
+    }**/
+    
+    protected virtual void  LoadModelCompleteCtrl()
+    {
+        if(this.modelCompleteCtrl !=null) return;
+        this.modelCompleteCtrl =GetComponentInChildren<ModelCompleteCtrl>();
+        Debug.LogWarning(transform.name +" : LoadModelCompleteCtrl ",gameObject);  
     }
 
 
@@ -54,11 +66,14 @@ public class BrickCtrl : ThienMonoBehaviour
         Debug.LogWarning(transform.name +" : LoadBrickRotate ",gameObject);
     }
 
-      protected virtual void LoadBrickMovement()
+    
+
+
+     protected virtual void LoadStateMachineCtrl()
     {
-        if(this.brickMovement !=null) return;
-        this.brickMovement =transform.GetComponentInChildren<BrickMovement>();
-        Debug.LogWarning(transform.name +" : LoadBrickMovement ",gameObject);
+        if(this.stateMachineCtrl !=null) return;
+        this.stateMachineCtrl =transform.GetComponentInChildren<StateMachineCtrl>();
+        Debug.LogWarning(transform.name +" : LoadStateMachineCtrl ",gameObject);
     }
 
 
@@ -68,3 +83,4 @@ public class BrickCtrl : ThienMonoBehaviour
 
    
 }
+

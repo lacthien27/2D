@@ -17,14 +17,13 @@ public class BrickMovement : BrickAbs
      protected override void Start()
     {
         base.Start();
-        IngredientImpact.OnImpactCollision +=ActionStopMovement;        
 
     }
 
     protected virtual  void FixedUpdate()  
 
     {
-        this.MoveVertical();
+       // this.MoveVertical();
 
     }
 
@@ -57,30 +56,18 @@ public class BrickMovement : BrickAbs
 
     }
 
-    protected virtual void ActionStopMovement()
+
+
+    protected virtual void StopMove()
     {
-           this.stopMoved =true;
-         
+        this.stopMoved=true;
     }
-
-    protected virtual void ActionActiveMovement()
-    {
-       this.stopMoved=false;
-       Debug.Log("fall");
-
-  
-
-    }
-
 
 
 
 
     protected void OnDestroy() 
     {
-
-        IngredientImpact.OnImpactCollision -=ActionStopMovement;
-
     }
 
   

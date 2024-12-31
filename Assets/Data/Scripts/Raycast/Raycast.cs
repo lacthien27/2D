@@ -4,6 +4,7 @@ using UnityEngine;
  using System;
 using UnityEngine.Video;
 using System.Linq;
+using System.Globalization;
 
 
 public class Raycast : ThienMonoBehaviour
@@ -11,6 +12,8 @@ public class Raycast : ThienMonoBehaviour
   [SerializeField]   protected float startNumber = -4;
     [SerializeField]  protected float endNumber = 4.4f;
     [SerializeField]  protected float step = 0.4f;
+
+    [SerializeField]  protected  bool isNotifying = false;
 
      [SerializeField] protected List<float> numbers;
 
@@ -20,6 +23,9 @@ public class Raycast : ThienMonoBehaviour
 
         public static event  Action<GameObject> SignalDestroyBrick;
 
+        
+         public static event Action SignalSpawnBrick;
+
 
 
 [SerializeField] public  List<RaycastHit> storeRayTriggered;
@@ -27,7 +33,7 @@ public class Raycast : ThienMonoBehaviour
     protected override void Start()
     {
         base.Start();
-       ModelCompleteCtrl.OnSpawnSignal+=PosMoveRay;  //  yet  cause
+       StopState.OnImpactSignal+=PosMoveRay;  //  yet  cause
         this.GetPosMoveRay();
     }
 
@@ -44,7 +50,10 @@ public class Raycast : ThienMonoBehaviour
 
     }
    protected virtual void PosMoveRay()
-    {   
+    {                        
+        isNotifying = false;
+
+        Debug.LogWarning("raycast");
        foreach(float number in numbers)
         {
 
@@ -57,20 +66,29 @@ public class Raycast : ThienMonoBehaviour
                         if(hit.collider.gameObject.layer == 6)
                         {
                         GameObject hitObject = hit.collider.gameObject;
-                        SignalDestroyBrick?.Invoke(hitObject);
-
- 
+                        SignalDestroyBrick?.Invoke(hitObject); 
+                        this.calHitsForFallState(transform.position.y);   //vị trí y của điểm bắn raycast
                         }
-
-
-                        
+      
                     }
-            }
-
-            
-       
+            } 
        }
+
+       if (isNotifying) return;    //method control only 1 signal give
+                         isNotifying = true;
+                         SignalSpawnBrick?.Invoke();
+                         Debug.LogWarning("signal spawn");
     }
+
+
+    protected virtual void calHitsForFallState(float number)
+    {
+      Debug.LogWarning(number+0.4f);
+    }
+
+
+
+
 
 }
 
